@@ -61,7 +61,7 @@ while(loop){
 			
 			p.harga = 300000;
 			System.out.println("Harga yang harus dibayar : "+ p.harga);
-		    loop=false;
+		    	loop=false;	
 			
 			break;
 				
