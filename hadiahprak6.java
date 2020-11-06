@@ -156,7 +156,7 @@ public class hadiahprak6{
 		System.out.println("");
 		System.out.print("Masukkan nama anda : ");
 		p.nama = input.nextLine();
-		System.out.print("Masukkan alamat anda :" );
+		System.out.print("Masukkan alamat anda : " );
 		p.alamat = input.nextLine();
 		
 		p.proses();
