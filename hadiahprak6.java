@@ -117,13 +117,14 @@ while(loop){
 		while(p.bayar<p.harga){
 			
 			if(p.bayar<p.harga){
-				System.out.println("uang anda kurang mohon masukkan dengan nominal yang lebih besar");
+			System.out.println("uang anda kurang mohon masukkan dengan nominal yang lebih besar");
 				
-	            System.out.print("Masukkan Jumlah uang dibayarkan : "+"Rp.");
+	            	System.out.print("Masukkan Jumlah uang dibayarkan : "+"Rp.");
 		        p.bayar= input.nextInt();
 			
-				}else{
-					System.out.print("Masukkan Jumlah uang dibayarkan : "+"Rp.");
+				}
+			else{
+			System.out.print("Masukkan Jumlah uang dibayarkan : "+"Rp.");
 		        p.bayar= input.nextInt();
 				}
 	
