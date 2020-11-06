@@ -1,3 +1,8 @@
+import java.util.Scanner;
+import java.util.Date;  
+import java.text.DateFormat;  
+import java.text.SimpleDateFormat;  
+   
 class Pln{
 	String nama;
 	String alamat;
@@ -12,7 +17,7 @@ class Pln{
         return dateFormat.format(date);  
     }
     
-    private String getTanggal() {  
+    	private String getTanggal() {  	
         DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");  
         Date date = new Date();  
         return dateFormat.format(date);  
@@ -39,16 +44,13 @@ class Pln{
 			 harga = 500000;
 			 System.out.println("Harga yang harus dibayar : "+ harga);
 			 loop=false;
-		
-			 
 			break;
 			
 			case 'B' :
 			
 			harga = 300000;
 			System.out.println("Harga yang harus dibayar : "+ harga);
-		    loop=false;
-			
+		    	loop=false;
 			break;
 				
 			default:
@@ -72,7 +74,7 @@ class Pln{
 			 
 			 harga = 800000;
 			 System.out.println("Harga yang harus dibayar : "+ harga);
-		     loop=false;
+		     	 loop=false;
 			 
 			break;
 			
@@ -93,7 +95,7 @@ class Pln{
 			
 }
 		else{
-			System.out.println("Maaf input anda salah");
+		System.out.println("Maaf input anda salah");
 		}
 	}		
 	
