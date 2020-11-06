@@ -111,7 +111,7 @@ class Pln{
 		System.out.println("Alamat pelanggan         : "+ alamat);
 		System.out.println("Harga yang harus dibayar : "+"Rp."+ harga);
 		System.out.println("Jumlah uang yg diberikan : "+"Rp."+ bayar);
-		System.out.println("Kembaliaan               : "+"Rp."+ (bayar-harga));
+		System.out.println("Kembalian                : "+"Rp."+ (bayar-harga));
 		System.out.println("=====Cetak Hasil Pembayaran=====");
 		
 	}
