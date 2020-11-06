@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 class Pln{
 	String nama;
 	String alamat;
@@ -8,50 +6,38 @@ class Pln{
 	int bayar;
 	
 	
-	void cetak(){
-		System.out.println("");
-		System.out.println("=====Cetak Hasil Pembayaran=====");
-		System.out.println("Nama pelanggan           : "+ nama);
-		System.out.println("Alamat pelanggan         : "+ alamat);
-		System.out.println("Harga yang harus dibayar : "+"Rp."+ harga);
-		System.out.println("Jumlah uang yg diberikan : "+"Rp."+ bayar);
-		System.out.println("Kembaliaan               : "+"Rp."+ (bayar-harga));
-		System.out.println("=====Cetak Hasil Pembayaran=====");
-		
-	}
-	
-}
-
-public class hadiahprak6{
-	public static void main(String[]args){
+	private String getWaktu() {  
+        DateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");  
+        Date date = new Date();  
+        return dateFormat.format(date);  
+    }
+    
+    private String getTanggal() {  
+        DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd");  
+        Date date = new Date();  
+        return dateFormat.format(date);  
+    }
+    
+	void proses(){
 		Scanner input = new Scanner(System.in);
-		boolean loop = true;
+		boolean loop=true;
 		
-		Pln p = new Pln();
-		System.out.println("=====Aplikasi pembayaran listrik=====");
-		System.out.println("");
-		System.out.print("Masukkan nama anda : ");
-		p.nama = input.nextLine();
-		System.out.print("Masukkan alamat anda :" );
-		p.alamat = input.nextLine();
+		while(loop){
+		System.out.print("Masukkan tipe(36/37) : ");
+		tipe = input.nextInt();
 		
 		
-while(loop){
-	System.out.print("Masukkan tipe(36/37) : ");
-	p.tipe = input.nextInt();
-		
-		
-		if(p.tipe == 36){
+		if(tipe == 36){
 	
 		while(loop){
 			System.out.print("Masukkan blok(A/B) : ");
-			p.blok = input.next().charAt(0);
+			blok = input.next().charAt(0);
 			
-		switch(p.blok){
+		switch(blok){
 			case 'A':
 			 
-			 p.harga = 500000;
-			 System.out.println("Harga yang harus dibayar : "+ p.harga);
+			 harga = 500000;
+			 System.out.println("Harga yang harus dibayar : "+ harga);
 			 loop=false;
 		
 			 
@@ -59,9 +45,9 @@ while(loop){
 			
 			case 'B' :
 			
-			p.harga = 300000;
-			System.out.println("Harga yang harus dibayar : "+ p.harga);
-		    	loop=false;	
+			harga = 300000;
+			System.out.println("Harga yang harus dibayar : "+ harga);
+		    loop=false;
 			
 			break;
 				
@@ -71,29 +57,29 @@ while(loop){
 			
 			 
 		}
-			}
+	}
 		
 		
-		}else if(p.tipe == 37){
+}			else if(tipe == 37){
 			while(loop){
 			
 			System.out.print("Masukkan blok(A/B) : ");
-			p.blok = input.next().charAt(0);
+			blok = input.next().charAt(0);
 			
 			
-		switch(p.blok){
+			switch(blok){
 			case 'A':
 			 
-			 p.harga = 800000;
-			 System.out.println("Harga yang harus dibayar : "+ p.harga);
+			 harga = 800000;
+			 System.out.println("Harga yang harus dibayar : "+ harga);
 		     loop=false;
 			 
 			break;
 			
 			case 'B' :
 			
-			p.harga = 600000;
-			System.out.println("Harga yang harus dibayar : "+ p.harga);
+			harga = 600000;
+			System.out.println("Harga yang harus dibayar : "+ harga);
 		
 			loop=false;
 			break;
@@ -109,9 +95,47 @@ while(loop){
 		else{
 			System.out.println("Maaf input anda salah");
 		}
-}		
+	}		
+	
+}
+ 
+    
+	
+	void cetak(){
+		System.out.println("");
+		System.out.println("=====Cetak Hasil Pembayaran=====");
+		System.out.println("Tanggal : "+getTanggal()+"  "+" Waktu sekarang : "+getWaktu());
+		System.out.println("Nama pelanggan           : "+ nama);
+		System.out.println("Alamat pelanggan         : "+ alamat);
+		System.out.println("Harga yang harus dibayar : "+"Rp."+ harga);
+		System.out.println("Jumlah uang yg diberikan : "+"Rp."+ bayar);
+		System.out.println("Kembaliaan               : "+"Rp."+ (bayar-harga));
+		System.out.println("=====Cetak Hasil Pembayaran=====");
+		
+	}
+	
+}
+
+public class hadiahprak6{
+	public static void main(String[]args){
+	
+		Scanner input = new Scanner(System.in);
+	
+		
+		Pln p = new Pln();
+	
+		System.out.println("=====Aplikasi pembayaran listrik=====");
+		System.out.println("");
+		System.out.print("Masukkan nama anda : ");
+		p.nama = input.nextLine();
+		System.out.print("Masukkan alamat anda :" );
+		p.alamat = input.nextLine();
+		
+		p.proses();
+		
+
 		System.out.print("Masukkan Jumlah uang dibayarkan : "+"Rp.");
-		        p.bayar= input.nextInt();
+		p.bayar= input.nextInt();
 			
 			
 		while(p.bayar<p.harga){
