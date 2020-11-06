@@ -110,13 +110,14 @@ class Pln{
 		while(bayar<harga){
 			
 			if(bayar<harga){
-				System.out.println("uang anda kurang mohon masukkan dengan nominal yang lebih besar");
+			System.out.println("uang anda kurang mohon masukkan dengan nominal yang lebih besar");
 				
-	            System.out.print("Masukkan Jumlah uang dibayarkan : "+"Rp.");
+	            	System.out.print("Masukkan Jumlah uang dibayarkan : "+"Rp.");
 		        bayar= input.nextInt();
 			
-				}else{
-					System.out.print("Masukkan Jumlah uang dibayarkan : "+"Rp.");
+				}
+			else{
+			System.out.print("Masukkan Jumlah uang dibayarkan : "+"Rp.");
 		        bayar= input.nextInt();
 				}
 	
