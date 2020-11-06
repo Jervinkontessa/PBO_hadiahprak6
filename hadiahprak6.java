@@ -30,7 +30,7 @@ class Pln{
 		while(loop){
 		System.out.print("Masukkan tipe(36/37) : ");
 		tipe = input.nextInt();
-		
+		 
 		
 		if(tipe == 36){
 	
